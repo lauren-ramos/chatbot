@@ -1,0 +1,18 @@
+services:
+  waha:
+    image: devlikeapro/waha
+    restart: always
+    ports:
+      - "3001:3000"
+    env_file:
+      - .env
+    environment:
+      WAHA_LOCAL_STORE_BASE_DIR: /app/.sessions
+      WAHA_AUTO_START_DELAY_SECONDS: "5"
+      WAHA_WORKER_RESTART_SESSIONS: "True"
+      WAHA_PRINT_QR: "True"
+      WAHA_NAMESPACE: all
+      WAHA_CLIENT_DEVICE_NAME: Chatbot
+      WAHA_CLIENT_BROWSER_NAME: Chrome
+    volumes:
+      - ./.sessions-waha:/app/.sessions

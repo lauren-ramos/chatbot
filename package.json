@@ -1,0 +1,11 @@
+﻿{
+  "name": "wpp-supabase-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "upload:supabase": "node upload-to-supabase.js",
+    "sync": "node upload-to-supabase.js",
+    "bot": "node waha-bot.js"
+  }
+}
